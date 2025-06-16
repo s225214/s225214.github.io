@@ -1,8 +1,8 @@
 const sidebar = document.getElementById("sidebar");
-const menuToggle = document.getElementById("menu-toggle");
+const toggleBtn = document.getElementById("menu-toggle");
 const darkToggle = document.getElementById("toggle-dark");
 
-menuToggle.addEventListener("click", () => {
+toggleBtn.addEventListener("click", () => {
   sidebar.classList.toggle("visible");
 });
 

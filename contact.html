@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Contact Us</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | ModernEat</title>
   <link rel="stylesheet" href="style.css"/>
   <script defer src="script.js"></script>
 </head>
 <body>
-  <aside class="sidebar">
-    <h2>🍝 La Bella Vita</h2>
+  <aside class="sidebar" id="sidebar">
     <nav>
       <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
-      <a href="about.html">About</a>
-      <a href="booking.html">Book a Table</a>
+      <a href="reservation.html">Reservations</a>
       <a href="contact.html">Contact</a>
+      <button id="toggle-dark">🌙 Dark Mode</button>
     </nav>
-    <button id="toggle-dark">🌓 Toggle Dark Mode</button>
   </aside>
 
-  <main>
+  <header class="topbar">
+    <button id="menu-toggle">☰</button>
     <h1>Contact Us</h1>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <label>Name: <input type="text" name="name" required /></label><br/>
-      <label>Email: <input type="email" name="email" required /></label><br/>
-      <label>Message:<br/>
-        <textarea name="message" rows="5" required></textarea>
-      </label><br/>
-      <button type="submit">Send</button>
-    </form>
-  </main>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <p>📍 456 Oak Street, Minimal City</p>
+      <p>📞 (555) 123-4567</p>
+      <p>📧 contact@moderneat.com</p>
+      <form class="form">
+        <label>Name <input type="text" required></label>
+        <label>Email <input type="email" required></label>
+        <label>Message <textarea required></textarea></label>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ModernEat</p>
+  </footer>
 </body>
 </html>

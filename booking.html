@@ -1,13 +1,43 @@
-<main>
-  <h1>Book a Table</h1>
-  <form>
-    <label>Name: <input type="text" required /></label><br/>
-    <label>Date: <input type="date" required /></label><br/>
-    <label>Time: <input type="time" required /></label><br/>
-    <label>Guests: <input type="number" min="1" max="20" required /></label><br/>
-    <label>Special Requests:<br/>
-      <textarea rows="4"></textarea>
-    </label><br/>
-    <button type="submit">Reserve</button>
-  </form>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservations | ModernEat</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservation.html">Reservations</a>
+      <a href="contact.html">Contact</a>
+      <button id="toggle-dark">🌙 Dark Mode</button>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <button id="menu-toggle">☰</button>
+    <h1>Reserve a Table</h1>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <form class="form">
+        <label>Name <input type="text" required></label>
+        <label>Email <input type="email" required></label>
+        <label>Date <input type="date" required></label>
+        <label>Time <input type="time" required></label>
+        <label>Guests <input type="number" min="1" max="20" required></label>
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ModernEat</p>
+  </footer>
+</body>
+</html>
