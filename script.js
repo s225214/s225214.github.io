@@ -1,13 +1,11 @@
-const toggleBtn = document.getElementById('toggle-dark');
-const menuToggle = document.getElementById('menu-toggle');
-const sidebar = document.getElementById('sidebar');
+const sidebar = document.getElementById("sidebar");
+const menuToggle = document.getElementById("menu-toggle");
+const darkToggle = document.getElementById("toggle-dark");
 
-// Toggle dark mode
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
+menuToggle.addEventListener("click", () => {
+  sidebar.classList.toggle("visible");
 });
 
-// Toggle sidebar menu
-menuToggle.addEventListener('click', () => {
-  sidebar.classList.toggle('visible');
+darkToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
 });
