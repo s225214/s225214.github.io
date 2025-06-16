@@ -91,11 +91,20 @@ a {
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+.menu-item:hover {
+  transform: scale(1.02);
 }
 .menu-item img {
   width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 10px;
+  margin-bottom: 1rem;
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -121,4 +130,83 @@ footer {
   text-align: center;
   padding: 1rem;
   background: var(--gray);
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.gallery-item h3 {
+  margin-top: 0;
+}
+
+.gallery-item p {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.filter-buttons button {
+  margin: 0.25rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background: var(--gray);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.filter-buttons button:hover,
+.filter-buttons button.active {
+  background: var(--accent);
+  color: white;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.menu-item {
+  background: var(--gray);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+.menu-item:hover {
+  transform: scale(1.02);
+}
+.menu-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.menu-item .price {
+  float: right;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.menu-item {
+  /* existing styles... */
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  display: block; /* ensure display is block initially */
+}
+.menu-item.hide {
+  opacity: 0;
+  pointer-events: none; /* prevent clicks when hidden */
+  position: absolute; /* remove from flow during fade */
+}
+.menu-grid {
+  position: relative; /* for absolute positioning inside */
 }

@@ -11,7 +11,7 @@
   <aside class="sidebar" id="sidebar">
     <nav>
       <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
+      <a href="menu.html" class="active">Menu</a>
       <a href="reservation.html">Reservations</a>
       <a href="contact.html">Contact</a>
       <button id="toggle-dark">🌙 Dark Mode</button>
@@ -20,25 +20,63 @@
 
   <header class="topbar">
     <button id="menu-toggle">☰</button>
-    <h1>Menu</h1>
+    <h1>Our Menu</h1>
   </header>
 
   <section class="section menu">
-    <div class="container grid">
-      <div class="menu-item">
-        <img src="https://source.unsplash.com/400x300/?salad" alt="Salad"/>
-        <h3>Garden Bowl</h3>
-        <p>Mixed greens with balsamic glaze</p>
+    <div class="container">
+      <div class="filter-buttons">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="starter">Starters</button>
+        <button data-filter="main">Mains</button>
+        <button data-filter="dessert">Desserts</button>
       </div>
-      <div class="menu-item">
-        <img src="https://source.unsplash.com/400x300/?pasta" alt="Pasta"/>
-        <h3>Truffle Pasta</h3>
-        <p>Handmade fettuccine with truffle oil</p>
-      </div>
-      <div class="menu-item">
-        <img src="https://source.unsplash.com/400x300/?dessert" alt="Dessert"/>
-        <h3>Lemon Tart</h3>
-        <p>Served with crème fraîche and mint</p>
+
+      <div class="grid menu-grid">
+        <!-- Starters -->
+        <div class="menu-item" data-category="starter">
+          <img src="https://source.unsplash.com/400x300/?bruschetta" alt="Bruschetta"/>
+          <h3>Bruschetta <span class="price">$8</span></h3>
+          <p>Toasted bread with tomato, basil, garlic, and olive oil.</p>
+        </div>
+
+        <div class="menu-item" data-category="starter">
+          <img src="https://source.unsplash.com/400x300/?soup" alt="Minestrone Soup"/>
+          <h3>Minestrone Soup <span class="price">$7</span></h3>
+          <p>Hearty Italian vegetable soup with beans and pasta.</p>
+        </div>
+
+        <!-- Mains -->
+        <div class="menu-item" data-category="main">
+          <img src="https://source.unsplash.com/400x300/?pizza,margherita" alt="Margherita Pizza"/>
+          <h3>Margherita Pizza <span class="price">$14</span></h3>
+          <p>Fresh basil, mozzarella, San Marzano tomato sauce.</p>
+        </div>
+
+        <div class="menu-item" data-category="main">
+          <img src="https://source.unsplash.com/400x300/?pasta,alfredo" alt="Fettuccine Alfredo"/>
+          <h3>Fettuccine Alfredo <span class="price">$16</span></h3>
+          <p>Homemade pasta in a creamy garlic-parmesan sauce.</p>
+        </div>
+
+        <div class="menu-item" data-category="main">
+          <img src="https://source.unsplash.com/400x300/?risotto" alt="Mushroom Risotto"/>
+          <h3>Mushroom Risotto <span class="price">$17</span></h3>
+          <p>Arborio rice with porcini mushrooms and white wine.</p>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-item" data-category="dessert">
+          <img src="https://source.unsplash.com/400x300/?tiramisu" alt="Tiramisu"/>
+          <h3>Tiramisu <span class="price">$9</span></h3>
+          <p>Espresso-soaked ladyfingers layered with mascarpone cream.</p>
+        </div>
+
+        <div class="menu-item" data-category="dessert">
+          <img src="https://source.unsplash.com/400x300/?gelato" alt="Gelato"/>
+          <h3>Gelato <span class="price">$7</span></h3>
+          <p>Artisan Italian ice cream with seasonal flavors.</p>
+        </div>
       </div>
     </div>
   </section>
